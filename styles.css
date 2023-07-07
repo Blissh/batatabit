@@ -154,8 +154,16 @@ main {
   margin: 48px auto;
 }
 
-.main-container__tables-coins {
+.main-container__tables-coins, .main-container__tables-comissions {
   max-width: 500px;
+}
+
+.main-container__tables-comissions, .left-position{
+  animation: fadeInRight 0.5s;
+}
+
+.animate-left{
+  animation: fadeInLeft 0.5s;
 }
 
 .main-container__tables-coins h3,
@@ -261,9 +269,11 @@ main {
   background-color: var(--soft-blue);
 }
 
+
+
 .right-position {
   position: absolute;
-  right: -30px;
+  right: -50px;
   top: calc(50% - 6px);
 }
 
@@ -279,7 +289,7 @@ main {
 
 .left-position {
   position: absolute;
-  left: -30px;
+  left: -50px;
   top: calc(50% - 6px);
 }
 
@@ -291,4 +301,26 @@ main {
   width: 12px;
   height: 12px;
   cursor: pointer;
+}
+
+
+@keyframes fadeInRight {
+  from{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  from{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

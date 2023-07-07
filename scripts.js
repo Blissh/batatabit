@@ -10,6 +10,8 @@ swipeButton.addEventListener("click", (e) => {
 
   if (comissionsTable.classList.toggle("hidden")) {
     coinsTable.classList.remove("hidden");
+    coinsTable.classList.add("animate-left");
+    swipeButton.classList.add("animate-left");
     swipeButton.classList.replace("left-position","right-position");
     spanIcon.classList.replace("arrow-left","arrow-right");
   } else {
