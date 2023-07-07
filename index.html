@@ -33,9 +33,9 @@
                 </p>
             </div>
             <div class="main-container__tables">
-                <div class="main-container__tables-coins">
-                    <h3>Monedas</h3>
-                    <div class="table-container">
+                <div class="main-container__tables-coins" id="main-container__tables-coins">
+                    <h3 class="orange-text">Monedas</h3>
+                    <div class="table-container" id="coin-container">
                         <div class="coin">Bitcoin</div>
                         <div class="price">$1.96<span class="trend-down"></span></div>
                         <div class="coin">Ethereum</div>
@@ -45,7 +45,26 @@
                         <div class="coin">Stellar</div>
                         <div class="price">$5.96<span class="trend-down"></span></div>
                     </div>
+                    <!-- <div class="swipe-table right-position" id="right-swipe-button"><span class="arrow-right"></span></div> -->
+                    <p class="soft-orange"><strong>Actualizado:</strong> 19 Julio 23:45</p>
                 </div>
+
+                <div class="main-container__tables-comissions hidden" id="main-container__tables-comissions">
+                    <h3 class="blue-text">Comisiones</h3>
+                    <div class="table-container" id="comissions-container">
+                        <div class="coin">Bitrade</div>
+                        <div class="price">$12.96</div>
+                        <div class="coin">Bitpreco</div>
+                        <div class="price">$13.07</div>
+                        <div class="coin">Novadax</div>
+                        <div class="price">$13.15</div>
+                        <div class="coin">Coinext</div>
+                        <div class="price">$14.96</div>
+                    </div>
+                    <!-- <div class="swipe-table left-position" id="left-swipe-button"><span class="arrow-left"></span></div> -->
+                    <p class="soft-blue"><strong>Actualizado:</strong> 19 Julio 23:45</p>
+                </div>
+                <div class="swipe-table right-position" id="swipe-button"><span class="arrow-right"></span></div>
             </div>
 
         </section>
@@ -54,5 +73,5 @@
         <section></section>
     </main>
 </body>
-
+<script src="./scripts.js"></script>
 </html>
