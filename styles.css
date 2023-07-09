@@ -22,6 +22,7 @@
 html {
   font-size: 62.5%;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -155,15 +156,17 @@ main {
   margin: 48px auto;
 }
 
-.main-container__tables-coins, .main-container__tables-comissions {
+.main-container__tables-coins,
+.main-container__tables-comissions {
   max-width: 500px;
 }
 
-.main-container__tables-comissions, .left-position{
+.main-container__tables-comissions,
+.left-position {
   animation: fadeInRight 0.5s;
 }
 
-.animate-left{
+.animate-left {
   animation: fadeInLeft 0.5s;
 }
 
@@ -270,8 +273,6 @@ main {
   background-color: var(--soft-blue);
 }
 
-
-
 .right-position {
   position: absolute;
   right: -50px;
@@ -304,22 +305,23 @@ main {
   cursor: pointer;
 }
 
-.section-benefits{
+.section-benefits {
+  position: relative;
   min-width: 320px;
   width: 100%;
   display: grid;
   grid-template-columns: minmax(280px, 520px);
   place-content: center;
   gap: 16px;
-  background-color: #201E1C;
-  padding: 0px 16px;
-  font-family: 'DM Sans', sans-serif;
+  background-color: #201e1c;
+  padding: 0px 16px 60px 16px;
+  font-family: "DM Sans", sans-serif;
 }
-.section-benefits-header{
+.section-benefits-header {
   margin: 64px 17px 32px 17px;
 }
 
-.section-benefits-header h2{
+.section-benefits-header h2 {
   color: var(--just-white);
   text-align: center;
   font-size: 2.4rem;
@@ -327,7 +329,7 @@ main {
   line-height: 2.6rem;
 }
 
-.section-benefits-header p{
+.section-benefits-header p {
   margin-top: 24px;
   color: var(--dark-text);
   text-align: center;
@@ -336,14 +338,14 @@ main {
   line-height: 1.8rem;
 }
 
-.benefits-card-container{
+.benefits-card-container {
   background-color: var(--warm-black);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
   padding: 14px 16px 22px 16px;
   border-radius: 4px;
 }
 
-.benefits-detail .benefits-detail-title{
+.benefits-detail .benefits-detail-title {
   color: var(--just-white);
   font-size: 1.8rem;
   font-weight: 700;
@@ -351,58 +353,241 @@ main {
   margin: 10px 0;
 }
 
-.benefits-detail .benefits-detail-body{
+.benefits-detail .benefits-detail-body {
   color: var(--dark-text);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
 }
 
-.clock{
+.batalogo {
+  position: absolute;
+  display: inline-block;
+  background-image: url(./assets/icons/potatologo.svg);
+  background-position: center;
+  justify-self: center;
+  top: -12px;
+  width: 40px;
+  height: 24px;
+}
+
+.clock {
   display: inline-block;
   background-image: url(./assets/icons/clock.svg);
   width: 24px;
   height: 24px;
 }
 
-.eye{
+.eye {
   display: inline-block;
   background-image: url(./assets/icons/eye.svg);
   width: 24px;
   height: 24px;
 }
 
-.dollar{
+.dollar {
   display: inline-block;
   background-image: url(./assets/icons/dollar-sign.svg);
   width: 24px;
   height: 24px;
 }
 
-.check{
+.check {
   display: inline-block;
   background-image: url(./assets/icons/check-circle.svg);
   width: 24px;
   height: 24px;
 }
 
+.background-image {
+  background-image: url(./assets/images/bitcoinbaby2x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-width: 320px;
+  height: 60vh;
+  text-align: center;
+}
+
+.background-image .background-image-title {
+  display: inline-block;
+  color: var(--just-white);
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  margin-top: 64px;
+}
+
+.section-plans {
+  background-color: var(--off-white);
+}
+
+.section-plans .section-title {
+  width: 90%;
+  margin: 80px 16px 48px 16px;
+  text-align: center;
+}
+
+.section-plans .section-title h2 {
+  color: #201e1c;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  margin-bottom: 24px;
+}
+
+.section-plans .section-title p {
+  color: var(--grey-text);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 18px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 20px;
+}
+
+.plans-container--cards {
+  position: relative;
+  width: 190px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.plans-container--cards .recommended {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--just-white);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  top: -16px;
+  left: calc(50% - 50px);
+}
+
+.plans-container--cards .card-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  margin-top: 16px;
+}
+
+.plans-container--cards .card-price {
+  color: var(--black);
+  font-family: Inter;
+  font-size: 5.2rem;
+  font-weight: 700;
+  letter-spacing: -0.416rem;
+  margin: 9px 0;
+}
+.plans-container--cards .card-price sup {
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 4px;
+}
+
+.plans-container--cards .card-body {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--grey-text);
+}
+
+.plans-container--cards .card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 5px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  background-color: var(--off-white);
+  border: 2px solid var(--primary-color);
+  color: #201e1c;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.arrow-cta {
+  display: inline-block;
+  background-image: url(./assets/icons/arrow-right-cta.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.card-cta:hover {
+  transform: translateX(2px);
+  background-color: #ffe9d4;
+}
+
+.section-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 50px;
+  background-color: var(--primary-color);
+  padding: 40px 65px;
+}
+
+.section-footer p {
+  color: var(--just-white);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.footer-branding {
+  text-align: center;
+}
+
+.footer-branding--logo {
+  display: inline-block;
+  background-image: url(./assets/icons/potatologo.svg);
+  background-position: center;
+  width: 40px;
+  height: 24px;
+}
+
+.footer-branding .footer-branding--name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--primary-soft-color);
+}
 
 @keyframes fadeInRight {
-  from{
+  from {
     opacity: 0;
     transform: translateX(100px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 @keyframes fadeInLeft {
-  from{
+  from {
     opacity: 0;
     transform: translateX(-100px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0);
   }
