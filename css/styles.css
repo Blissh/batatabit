@@ -96,7 +96,7 @@ header img {
   width: 13px;
   height: 13px;
   margin-left: 10px;
-  background-image: url(./assets/icons/arrow-down.svg);
+  background-image: url(../assets/icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -117,7 +117,7 @@ main {
 }
 
 .main-container__bgimg {
-  background-image: url(./assets/images/Bitcoin.png);
+  background-image: url(../assets/images/Bitcoin.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,9 +196,10 @@ main {
 
 .table-container {
   display: grid;
+  min-width: 200px;
   width: 100%;
   gap: 1px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(100px,200px));
   grid-template-rows: repeat(4, 39px);
   place-content: center;
   font-family: "Inter", sans-serif;
@@ -224,7 +225,7 @@ main {
 .table-container .price span.trend-down {
   display: inline-block;
   margin-left: 1rem;
-  background-image: url(./assets/icons/trending-down.svg);
+  background-image: url(../assets/icons/trending-down.svg);
   width: 12px;
   height: 12px;
 }
@@ -232,7 +233,7 @@ main {
 .table-container .price span.trend-up {
   display: inline-block;
   margin-left: 1rem;
-  background-image: url(./assets/icons/trending-up.svg);
+  background-image: url(../assets/icons/trending-up.svg);
   background-position: center;
   width: 12px;
   height: 12px;
@@ -281,7 +282,7 @@ main {
 
 .arrow-right {
   display: block;
-  background-image: url(./assets/icons/arrow-right.svg);
+  background-image: url(../assets/icons/arrow-right.svg);
   background-position: center;
   background-repeat: no-repeat;
   width: 12px;
@@ -297,7 +298,7 @@ main {
 
 .arrow-left {
   display: block;
-  background-image: url(./assets/icons/arrow-left.svg);
+  background-image: url(../assets/icons/arrow-left.svg);
   background-position: center;
   background-repeat: no-repeat;
   width: 12px;
@@ -363,7 +364,7 @@ main {
 .batalogo {
   position: absolute;
   display: inline-block;
-  background-image: url(./assets/icons/potatologo.svg);
+  background-image: url(../assets/icons/potatologo.svg);
   background-position: center;
   justify-self: center;
   top: -12px;
@@ -373,34 +374,34 @@ main {
 
 .clock {
   display: inline-block;
-  background-image: url(./assets/icons/clock.svg);
+  background-image: url(../assets/icons/clock.svg);
   width: 24px;
   height: 24px;
 }
 
 .eye {
   display: inline-block;
-  background-image: url(./assets/icons/eye.svg);
+  background-image: url(../assets/icons/eye.svg);
   width: 24px;
   height: 24px;
 }
 
 .dollar {
   display: inline-block;
-  background-image: url(./assets/icons/dollar-sign.svg);
+  background-image: url(../assets/icons/dollar-sign.svg);
   width: 24px;
   height: 24px;
 }
 
 .check {
   display: inline-block;
-  background-image: url(./assets/icons/check-circle.svg);
+  background-image: url(../assets/icons/check-circle.svg);
   width: 24px;
   height: 24px;
 }
 
 .background-image {
-  background-image: url(./assets/images/bitcoinbaby2x.jpg);
+  background-image: url(../assets/images/bitcoinbaby2x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -425,7 +426,6 @@ main {
 }
 
 .section-plans .section-title {
-  width: 90%;
   margin: 80px 16px 48px 16px;
   text-align: center;
 }
@@ -449,16 +449,24 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 18px;
+  gap: 15px;
+  height: 320px;
   overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
   scrollbar-width: none;
   padding: 20px;
 }
 
 .plans-container--cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 190px;
+  min-width: 190px;
+  max-width: 300px;
   height: fit-content;
+  scroll-snap-align: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
@@ -527,7 +535,7 @@ main {
 
 .arrow-cta {
   display: inline-block;
-  background-image: url(./assets/icons/arrow-right-cta.svg);
+  background-image: url(../assets/icons/arrow-right-cta.svg);
   width: 24px;
   height: 24px;
 }
@@ -559,7 +567,7 @@ main {
 
 .footer-branding--logo {
   display: inline-block;
-  background-image: url(./assets/icons/potatologo.svg);
+  background-image: url(../assets/icons/potatologo.svg);
   background-position: center;
   width: 40px;
   height: 24px;

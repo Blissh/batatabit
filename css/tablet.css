@@ -1,0 +1,30 @@
+.main-container__tables {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-container__tables .main-container__tables-comissions {
+  display: block;
+}
+
+#swipe-button {
+  display: none;
+}
+
+.section-benefits {
+  grid-template-columns: repeat(2, minmax(280px, 520px));
+}
+
+.section-benefits-header{
+    grid-column: 1 / 3;
+}
+
+.background-image{
+    height: 200px;
+}
+
+.plans-container{
+    justify-content: center;
+    gap: 40px;
+}
